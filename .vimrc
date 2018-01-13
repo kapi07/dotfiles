@@ -43,6 +43,8 @@ set cursorline
 set virtualedit=all
 set clipboard+=unnamed
 set ignorecase
+set list
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
 
 set expandtab
 set tabstop=4
@@ -50,5 +52,3 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smartindent
-set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
