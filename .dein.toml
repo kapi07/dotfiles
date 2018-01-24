@@ -6,10 +6,13 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo =  'w0ng/vim-hybrid'
 
 [[plugins]]
-repo =  'w0ng/vim-hybrid'
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -17,7 +20,17 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 on_i = 1
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+repo = 'zchee/deoplete-jedi'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+on_ft = ['elixir', 'eelixir']
+
+[[plugins]]
+repo = 'slashmili/alchemist.vim'
+on_ft = ['elixir', 'eelixir']
