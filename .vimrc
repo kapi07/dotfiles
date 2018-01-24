@@ -28,13 +28,18 @@ endif
 if dein#check_install()
     call dein#install()
 endif
-"End dein Scripts-------------------------
+" End dein Scripts-------------------------
 
-" Colorscheme-----------------------------
+" -----------------------------------------
+" Neovim'sPython Provider
+" -----------------------------------------
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+" Colorscheme------------------------------
 set background=dark
 colorscheme hybrid
 
-" Basic Setting---------------------------
+" Basic Setting----------------------------
 syntax on
 set number
 set nobackup

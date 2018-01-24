@@ -12,16 +12,12 @@ repo = 'Shougo/neosnippet-snippets'
 repo =  'w0ng/vim-hybrid'
 
 [[plugins]]
-repo =  'kana/vim-submode'
+repo = 'Shougo/deoplete.nvim'
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+on_i = 1
 
 [[plugins]]
-repo = 'thinca/vim-ref'
+repo = 'vim-airline/vim-airline'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-
-[[plugins]]
-repo = 'udalov/kotlin-vim'
+repo = 'vim-airline/vim-airline-themes'
