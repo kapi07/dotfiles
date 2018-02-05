@@ -27,10 +27,13 @@ on_ft = 'toml'
 repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
 
-[[plugins]]
-repo = 'elixir-lang/vim-elixir'
-on_ft = ['elixir', 'eelixir']
+#[[plugins]]
+#repo = 'elixir-lang/vim-elixir'
+#on_ft = ['elixir', 'eelixir']
 
 [[plugins]]
 repo = 'slashmili/alchemist.vim'
 on_ft = ['elixir', 'eelixir']
+
+[[plugins]]
+repo = 'elixir-editors/vim-elixir'
