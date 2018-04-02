@@ -30,9 +30,32 @@ if dein#check_install()
 endif
 " End dein Scripts-------------------------
 
-" -----------------------------------------
-" Neovim'sPython Provider
-" -----------------------------------------
+" Neosnippet-------------------------------
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-o>     <Plug>(neosnippet_expand_or_jump)
+smap <C-o>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-o>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Clang Settings---------------------------
+let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib'
+let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/6.0.0/lib/clang'
+
+" Neovim'sPython Provider------------------
 let g:python3_host_prog = '/usr/local/bin/python3'
 let g:python_host_prog  = '/usr/local/bin/python2'
 

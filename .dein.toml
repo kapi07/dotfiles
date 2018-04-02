@@ -20,6 +20,12 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 on_i = 1
 
 [[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
@@ -37,3 +43,17 @@ on_ft = ['elixir', 'eelixir']
 
 [[plugins]]
 repo = 'elixir-editors/vim-elixir'
+on_ft = ['elixir', 'eelixir']
+
+[[plugins]]
+repo = 'zchee/deoplete-clang'
+hook_source = '''
+let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib'
+let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/6.0.0/lib/clang'
+'''
+on_ft = ['c', 'cpp', 'cmake']
+depends = ['deoplete.nvim']
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+on_i = 1
