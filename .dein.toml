@@ -57,3 +57,7 @@ depends = ['deoplete.nvim']
 [[plugins]]
 repo = 'cohama/lexima.vim'
 on_i = 1
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = ['tex']

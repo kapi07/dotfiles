@@ -79,16 +79,36 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set autoindent
 set smartindent
+set autoindent
 
 augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.ex setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.exs setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " Template---------------------------------
 autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/python.txt
 autocmd BufNewFile *.cpp 0r $HOME/dotfiles/.vim/template/c++.txt
+autocmd BufNewFile *.html 0r $HOME/dotfiles/.vim/template/html.txt
+
+" Vimtex-----------------------------------
+let g:vimtex_compiler_latexmk = {
+      \ 'background': 1,
+      \ 'build_dir': '',
+      \ 'continuous': 1,
+      \ 'options': [
+      \    '-pdfdvi', 
+      \    '-verbose',
+      \    '-file-line-error',
+      \    '-synctex=1',
+      \    '-interaction=nonstopmode',
+      \],
+      \}
+
+let g:vimtex_view_general_viewer
+      \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+let g:vimtex_view_general_options = '-r @line @pdf @tex'
